@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - MovieRental</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -22,14 +22,15 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("TOP", "Contact", "Home")</li>
-                <li>@Html.ActionLink("Movies", "Movies/Random", "Home")</li>
+                <li>@Html.ActionLink("TOP 5", "Top", "Movies")</li>
+                <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+                <li>@Html.ActionLink("Random Movie", "Random", "Movies")</li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
             </ul>
             <ul class="nav navbar-nav" style="float: right;">
-                <li>@Html.ActionLink("Profile", "Contact", "Home")</li>
-                <li>@Html.ActionLink("Login", "Contact", "Home")</li>
-                <li>@Html.ActionLink("SignUp", "About", "Home")</li>
+                <li>@Html.ActionLink("Profile", "MyProfile", "User")</li>
+                <li>@Html.ActionLink("Login", "Login", "User")</li>
+                <li>@Html.ActionLink("SignUp", "SignUp", "User")</li>
             </ul>
         </div>
     </div>

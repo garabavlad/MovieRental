@@ -32,9 +32,18 @@ namespace MovieRental.Controllers
             return View(viewModel);
         }
 
-        public ActionResult Edit(int id)
+        // When clicked in NavBar on "Movies", user will be sent here.
+        // An action to show all available movies:
+        public ActionResult ShowAll()
         {
-            return Content("id=" + id);
+            return View();
+        }
+
+        // When clicked in NavBar on "Top", user will be sent here.
+        // An action to show top 5 movies:
+        public ActionResult Top()
+        {
+            return View();
         }
 
         public ActionResult Index(int? pageIndex, string sortBy)
@@ -49,14 +58,23 @@ namespace MovieRental.Controllers
                 sortBy = "Name";
             }
 
-            return Content(String.Format("pageIndex={0}&soryBy={1}", pageIndex, sortBy));
+            return View();
         }
+
+
+        /*
+        public ActionResult Edit(int id)
+        {
+            return Content("id=" + id);
+        }
+
+        
 
         [Route("movies/released/{year:regex(\\d{4})}/{month:regex(\\d{2})}")]
         public ActionResult ByReleaseDate(int year, byte month)
         {
             return Content(year + "/" + month);
-        }
-            
+        }*/
+
     }
 }
